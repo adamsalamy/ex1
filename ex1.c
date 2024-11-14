@@ -10,9 +10,22 @@ Assignment:ex1
 int main() {
   
   // What bit
-  printf("What bit:\n");
-  /*Scan two integers (representing number and a position)
-  Print the bit in this position. */
+  printf("What bit:\n");//
+    // What bit
+    int number = 0;
+    int position = 0;
+   // printf("What bit:\n");//
+    printf("Please enter a number:\n");
+    scanf("%d",&number);
+    printf("Please enter a position:\n");
+    scanf("%d", &position);
+    number = (1 << position) & number;// turning every bit to zero, apart from the chosen one
+    //printf("%d\n", number);
+    int bit = number >> position;//moving the bit to be lsb.
+    printf("%d\n", bit);
+
+    /*Scan two integers (representing number and a position)
+    Print the bit in this position. */
   
   // Set bit
   printf("\nSet bit:\n");
